@@ -360,8 +360,12 @@
 				
 				function activateSlide(){
 					t.panelText.hide().empty();
+					
+					t.panelText.unbind('click');
+					
 					t.getChildren().not('.deleting').each(function(i, el){
 						var li = $(el),
+							a = li.find('a').first(),
 							fade = li.find('.fade'),
 							logo = li.find('.logo'),
 							p = li.find('p'),
@@ -372,7 +376,10 @@
 							fade.fadeIn(200);
 							if(logo.length) t.panelText.append(logo.hide().clone().show());
 							if(p.length) t.panelText.append(p.clone());
-							t.panelText.fadeIn(300);
+							
+							t.panelText.fadeIn(300).bind('click', function(){
+								location.href = a[0].href;
+							});
 						}else{
 							fade.fadeOut();
 							li.addClass('clickable');
