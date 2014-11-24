@@ -304,11 +304,11 @@
 					}
 					
 					li.hover(function(){
-						if(li.data('index') == t.currentIndex) return false;
-						li.find('.fade').fadeIn();
+						if($(this).data('index') == t.currentIndex) return false;
+						$(this).children('.fade').fadeIn();
 					},function(){
-						if(li.data('index') == t.currentIndex) return false;
-						li.find('.fade').fadeOut();
+						if($(this).data('index') == t.currentIndex) return false;
+						$(this).children('.fade').fadeOut();
 					});
 					
 					img.css({
