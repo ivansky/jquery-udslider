@@ -281,7 +281,7 @@
 						.click(function(){
 							t.slideTo(i);
 						});
-					if($.browser.msie && parseInt($.browser.version) < 9){
+					if(typeof $.browser.msie !== 'undefined' && parseInt($.browser.version) < 9){
 						li.hover(function(){
 							$(this).addClass('hover');
 						},function(){
