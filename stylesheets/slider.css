@@ -1,0 +1,43 @@
+.slider-wrapper {
+	width:640px;
+	display: block;
+	height:350px;
+	overflow: hidden;
+	margin:10px 0;
+	position: relative;
+}
+
+.slider-wrapper .text > p > strong {
+	font-size: 180%;
+} 
+
+.slider-wrapper img {
+	margin:0;
+	padding:0;
+	box-shadow: none;
+}
+
+.slider-wrapper .udslider li {
+	box-shadow: none;
+}
+
+.slider-wrapper .udslider .panel .arrow.left {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEzLjcyNXB4IiBoZWlnaHQ9IjIyLjA2M3B4IiB2aWV3Qm94PSIwIDAgMTMuNzI1IDIyLjA2MyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTMuNzI1IDIyLjA2MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuMzc1LDExLjAzbDYuNzQyLTYuNzQyYzAuODEtMC44MDksMC44MS0yLjEzNSwwLTIuOTQ0TDEyLjM4LDAuNjA3Yy0wLjgxMS0wLjgxMi0yLjEzNS0wLjgxMi0yLjk0NSwwTDAuNiw5LjQ0MmMtMC40MzUsMC40MzQtMC42MjgsMS4wMTctMC41OTcsMS41ODljLTAuMDMxLDAuNTcxLDAuMTYyLDEuMTU0LDAuNTk3LDEuNTg4bDguODM1LDguODM0YzAuODExLDAuODEyLDIuMTM1LDAuODEyLDIuOTQ1LDBsMC43MzctMC43MzdjMC44MS0wLjgwOCwwLjgxLTIuMTM0LDAtMi45NDJMNi4zNzUsMTEuMDN6Ii8+PC9zdmc+);
+}
+
+.slider-wrapper .udslider .panel .arrow.right {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEzLjcyNXB4IiBoZWlnaHQ9IjIyLjA2M3B4IiB2aWV3Qm94PSIwIDAgMTMuNzI1IDIyLjA2MyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTMuNzI1IDIyLjA2MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTcuMzUsMTEuMDNsLTYuNzQyLDYuNzQyYy0wLjgxLDAuODA5LTAuODEsMi4xMzUsMCwyLjk0NGwwLjczNywwLjczNmMwLjgxMSwwLjgxMiwyLjEzNSwwLjgxMiwyLjk0NSwwbDguODM1LTguODM1YzAuNDM1LTAuNDM0LDAuNjI4LTEuMDE3LDAuNTk3LTEuNTg5YzAuMDMxLTAuNTcxLTAuMTYyLTEuMTU0LTAuNTk3LTEuNTg4TDQuMjksMC42MDdjLTAuODExLTAuODEyLTIuMTM1LTAuODEyLTIuOTQ1LDBMMC42MDgsMS4zNDRjLTAuODEsMC44MDgtMC44MSwyLjEzNCwwLDIuOTQyTDcuMzUsMTEuMDN6Ii8+PC9zdmc+);
+}
+
+.slider-wrapper .udslider .panel .arrow.left,
+.slider-wrapper .udslider .panel .arrow.right {
+	background-color: transparent;
+	width:13px;
+	height:22px;
+	background-repeat: no-repeat;
+}
+
+.slider-wrapper .udslider .panel .arrow.left:hover,
+.slider-wrapper .udslider .panel .arrow.right:hover {
+	background-color: transparent;
+}

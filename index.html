@@ -2,36 +2,43 @@
 <html>
 
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="jQuery udSlider : Flacky slider on jQuery">
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="jQuery udSlider : Flacky slider on jQuery">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>jQuery udSlider</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" href="stylesheets/slider.css">
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
+	<link type="text/css" href="https://rawgit.com/ivansky/jquery-udslider/master/source/udslider.css" rel="stylesheet">
+	<script type="text/javascript" src="https://rawgit.com/ivansky/jquery-udslider/master/source/udslider.js"></script>
+	
+	<title>jQuery udSlider</title>
   </head>
 
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ivansky/jquery-udslider">View on GitHub</a>
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+		  <a id="forkme_banner" href="https://github.com/ivansky/jquery-udslider">View on GitHub</a>
 
-          <h1 id="project_title">jQuery udSlider</h1>
-          <h2 id="project_tagline">Flacky slider on jQuery</h2>
+		  <h1 id="project_title">jQuery udSlider</h1>
+		  <h2 id="project_tagline">Flacky slider on jQuery</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/ivansky/jquery-udslider/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/ivansky/jquery-udslider/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+			<section id="downloads">
+			  <a class="zip_download_link" href="https://github.com/ivansky/jquery-udslider/zipball/master">Download this project as a .zip file</a>
+			  <a class="tar_download_link" href="https://github.com/ivansky/jquery-udslider/tarball/master">Download this project as a tar.gz file</a>
+			</section>
+		</header>
+	</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+	<!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+	  <section id="main_content" class="inner">
+		<h1>
 <a id="jquery-flacky-slider-plugin" class="anchor" href="#jquery-flacky-slider-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery flacky slider plugin</h1>
 
 <ol>
@@ -39,6 +46,61 @@
 <li><a href="#initialize-slider">Initialize slider</a></li>
 <li><a href="#example-usage">Example usage</a></li>
 </ol>
+
+			<div class="slider-wrapper">
+				<ul id="udslider" class="udslider" style="height:350px;">
+					<li>
+						<img src="images/1.jpg" alt="" />
+						<p>
+							<strong>Lorem ipsum</strong>
+							<br>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue tellus eleifend est ultricies scelerisque vel nec ex. Vivamus sapien orci, eleifend ac consectetur ut, venenatis in ligula.
+						</p>
+					</li>
+					<li>
+						<img src="images/2.jpg" alt="" />
+						<p>
+							<strong>Vivamus</strong>
+							<br>
+							Vivamus quis lacinia tortor. Nullam est augue, eleifend id interdum in, feugiat sit amet felis.
+						</p>
+					</li>
+					<li>
+						<img src="images/3.jpg" alt="" />
+						<p>
+							<strong>Phasellus</strong>
+							<br>
+							Phasellus viverra tortor in erat luctus, quis pretium augue ultrices. Phasellus quis vestibulum ipsum. Curabitur sed massa ex. Cras ac mi dapibus justo blandit aliquet.
+						</p>
+					</li>
+					<li>
+						<img src="images/4.jpg" alt="" />
+						<p>
+							<strong>Cum sociis</strong>
+							<br>
+							Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Cras sit amet consectetur quam.
+						</p>
+					</li>
+					<li>
+						<img src="images/5.jpg" alt="" />
+						<p>
+							<strong>Praesent volutpat</strong>
+							<br>
+							Praesent volutpat dolor rutrum velit porttitor, non suscipit tortor imperdiet. Sed et aliquam turpis. Mauris vulputate malesuada mauris ac egestas. Sed aliquam, metus vitae porttitor iaculis, neque nisl ultricies ante, vitae pellentesque sem magna id sem. 
+						</p>
+					</li>
+				</ul>
+			</div>
+	
+			<script type="text/javascript">
+				$(function(){
+					$('#udslider').udslider({
+						angle: 72,      // Skew angle, default 75
+						count: 5,       // Limit visible sliders join main
+						timer: 3500     // Time to autoslide, 0 - disable
+					});
+				});
+			</script>
 
 <h2>
 <a id="load-requirements" class="anchor" href="#load-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load requirements</h2>
@@ -54,49 +116,53 @@
 <a id="initialize-slider" class="anchor" href="#initialize-slider" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initialize slider</h2>
 
 <div class="highlight highlight-js"><pre>$(<span class="pl-st">function</span>(){
-    $(<span class="pl-s1"><span class="pl-pds">'</span>#udslider<span class="pl-pds">'</span></span>).udslider({
-        angle<span class="pl-k">:</span> <span class="pl-c1">72</span>,      <span class="pl-c">// Skew angle, default 75</span>
-        count<span class="pl-k">:</span> <span class="pl-c1">5</span>,       <span class="pl-c">// Limit visible sliders join main</span>
-        timer<span class="pl-k">:</span> <span class="pl-c1">3500</span>     <span class="pl-c">// Time to autoslide, 0 - disable</span>
-    });
+	$(<span class="pl-s1"><span class="pl-pds">'</span>#udslider<span class="pl-pds">'</span></span>).udslider({
+		angle<span class="pl-k">:</span> <span class="pl-c1">72</span>,      <span class="pl-c">// Skew angle, default 75</span>
+		count<span class="pl-k">:</span> <span class="pl-c1">5</span>,       <span class="pl-c">// Limit visible sliders join main</span>
+		timer<span class="pl-k">:</span> <span class="pl-c1">3500</span>     <span class="pl-c">// Time to autoslide, 0 - disable</span>
+	});
 });</pre></div>
 
 <h2>
 <a id="example-usage" class="anchor" href="#example-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example usage</h2>
 
 <div class="highlight highlight-html"><pre>    &lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>udslider<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>udslider<span class="pl-pds">"</span></span> <span class="pl-e">style</span>=<span class="pl-s1"><span class="pl-pds">"</span>height:340px;opacity:0;<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">li</span>&gt;
-            &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>slider-pics/01-slider-picture.jpg<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo-slider/01-logo-slider.png<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">p</span>&gt;description first&lt;/<span class="pl-ent">p</span>&gt;
-        &lt;/<span class="pl-ent">li</span>&gt;
-        &lt;<span class="pl-ent">li</span>&gt;
-            &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>slider-pics/02-slider-picture.jpg<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo-slider/02-logo-slider.png<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">p</span>&gt;description second&lt;/<span class="pl-ent">p</span>&gt;
-        &lt;/<span class="pl-ent">li</span>&gt;
-    &lt;/<span class="pl-ent">ul</span>&gt;</pre></div>
-      </section>
-    </div>
+		&lt;<span class="pl-ent">li</span>&gt;
+			&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>slider-pics/01-slider-picture.jpg<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+			&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo-slider/01-logo-slider.png<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+			&lt;<span class="pl-ent">p</span>&gt;description first&lt;/<span class="pl-ent">p</span>&gt;
+		&lt;/<span class="pl-ent">li</span>&gt;
+		&lt;<span class="pl-ent">li</span>&gt;
+			&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>slider-pics/02-slider-picture.jpg<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+			&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo-slider/02-logo-slider.png<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>logo<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+			&lt;<span class="pl-ent">p</span>&gt;description second&lt;/<span class="pl-ent">p</span>&gt;
+		&lt;/<span class="pl-ent">li</span>&gt;
+	&lt;/<span class="pl-ent">ul</span>&gt;</pre></div>
+	
+	
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">jQuery udSlider maintained by <a href="https://github.com/ivansky">ivansky</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+	
+		</section>
+	</div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-56948890-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+	<!-- FOOTER  -->
+	<div id="footer_wrap" class="outer">
+		<footer class="inner">
+			<p class="copyright">jQuery udSlider maintained by <a href="https://github.com/ivansky">ivansky</a></p>
+			<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+		</footer>
+	</div>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-56948890-1");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
 
 
   </body>
